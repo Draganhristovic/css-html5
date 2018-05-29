@@ -1,0 +1,101 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Renault</title>
+    <link rel="shortcut icon" href="favicon.ico" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/Stilovi/Stil.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="~/Skripte/Skripta.js"></script>
+    @RenderSection("skripte", required: false)
+</head>
+    <body>
+        <nav class="navbar navbar-inverse ozbiljan">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="~/Index">
+                        <div class="logo">
+                            <img src="http://freevectorlogo.net/wp-content/uploads/2012/10/renault-auto-vector-logo-200x200.png" width="80" height="80" />
+                        </div>
+                    </a>
+                </div>
+                <ul class="nav navbar-nav">
+                    <li class="active">
+                        <a href="~/Index">
+                            <i class="glyphicon glyphicon-home home-button renaultColor"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Renault Scenic<span class="caret"></span></a>
+                        <ul class="dropdown-menu dropdownBackground">
+                            <li><a class="btn btn-lg" data-toggle="modal" data-target="#myModal" onclick="crveniScenic()">Crveni</a></li>
+                            <li><a class="btn btn-lg" data-toggle="modal" data-target="#myModal" onclick="zeleniScenic()">Zeleni</a></li>
+                            <li><a class="btn btn-lg" data-toggle="modal" data-target="#myModal" onclick="plaviScenic()">Plavi</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Renault Thalia<span class="caret"></span></a>
+                        <ul class="dropdown-menu dropdownBackground">
+                            <li><a class="btn btn-lg" data-toggle="modal" data-target="#myModal" onclick="crvenaTalija()">Crveni</a></li>
+                            <li><a class="btn btn-lg" data-toggle="modal" data-target="#myModal" onclick="plavaTalija()">Plavi</a></li>
+                            <li><a class="btn btn-lg" data-toggle="modal" data-target="#myModal" onclick="sivaTalija()">Sivi</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="modal fade" id="myModal" role="dialog">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <h4 class="modal-title">Slika automobila</h4>
+                            </div>
+                            <div class="modal-body centriraj">
+                                <img id="slikaAutomobila" width="570" height="300" />
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default closeButtonDialog" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <form class="navbar-form navbar-right" action="https://www.google.com/search">
+                    <div class="input-group">
+                        <input type="text" class="form-control searchControl" placeholder="Pretraga..." name="q">
+                        <div class="input-group-btn">
+                            <button class="btn btn-warning searchButton" type="submit">
+                                <i class="glyphicon glyphicon-search"></i>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </nav>
+        <ul class="nav nav-pills nav-stacked sidebar">
+            <li role="presentation" class="liFocus"><a href="https://www.facebook.com/renault/" class="centriraj"><div class="wrapperSidebar"><i class="glyphSize glyphicon glyphicon-user colorGlyph"></i><span class="sidebarHover">Korisnici</span></div></a></li>
+            <li role="presentation" class="liFocus"><a href="mailto:renault@renault.com" class="centriraj"><div class="wrapperSidebar"><i class="glyphSize glyphicon glyphicon-envelope colorGlyph"></i><span class="sidebarHover">E-mail</span></div></a></li>
+            <li role="presentation" class="liFocus"><a href="https://www.renault.co.uk/book-a-test-drive.html" class="centriraj"><div class="wrapperSidebar"><i class="glyphSize glyphicon glyphicon-road colorGlyph"></i><span class="sidebarHover">Probna vožnja</span></div></a></li>
+            <li role="presentation" class="liFocus"><a href="https://www.youtube.com/user/renault" class="centriraj"><div class="wrapperSidebar"><i class="glyphSize glyphicon glyphicon-facetime-video colorGlyph"></i><span class="sidebarHover">Video</span></div></a></li>
+            <li role="presentation" class="liFocus"><a href="https://pixabay.com/en/photos/renault/" class="centriraj"><div class="wrapperSidebar"><i class="glyphSize glyphicon glyphicon-picture colorGlyph"></i><span class="sidebarHover">Slike</span></div></a></li>
+            <li role="presentation" class="liFocus"><a href="https://www.renault.co.uk/" class="centriraj"><div class="wrapperSidebar"><i class="glyphSize glyphicon glyphicon-shopping-cart colorGlyph"></i><span class="sidebarHover">Kupovina</span></div></a></li>
+            <li role="presentation" class="liFocus"><a href="https://group.renault.com/" class="centriraj"><div class="wrapperSidebar"><i class="glyphSize glyphicon glyphicon-globe colorGlyph"></i><span class="sidebarHover">Globalni sajt</span></div></a></li>
+            <li role="presentation" class="liFocus"><a href="https://www.renault.co.uk/contact.html" class="centriraj"><div class="wrapperSidebar"><i class="glyphSize glyphicon glyphicon-phone colorGlyph"></i><span class="sidebarHover">Kontakt</span></div></a></li>
+        </ul>
+        <ul class="nav nav-pills nav-stacked reklame">
+            <li role="presentation" class="liFocus"><a href="https://openclassrooms.com/courses/dynamisez-vos-sites-web-avec-javascript#part_309955" class="centriraj"><div class="commercialWrapper"><img src="http://www.tripwiremagazine.com/wp-content/uploads/2010/03/JavaScript-jQuery-David-Sawyer-McFarland.jpg" alt="Greska" width="100" /><span class="commercialText">JavaScript za početnike</span></div></a></li>
+            <li role="presentation" class="liFocus"><a href="http://shop.oreilly.com/product/0636920039303.do" class="centriraj"><div class="commercialWrapper"><img src="http://twimgs.com/ddj/galleries/24/03_full.jpg" alt="Greska" width="100" /><span class="commercialText">JavaScript napredno</span></div></a></li>
+            <li role="presentation" class="liFocus"><a href="https://www.syncfusion.com/resources/techportal/ebooks/jquery" class="centriraj"><div class="commercialWrapper"><img src="http://eloquentjavascript.net/img/cover.png" alt="Greska" width="100" /><span class="commercialText">JavaScript i JScript</span></div></a></li>
+            <li role="presentation" class="liFocus"><a href="http://shop.oreilly.com/product/0636920027812.do" class="centriraj"><div class="commercialWrapper"><img src="https://covers.oreillystatic.com/images/0636920027812/cat.gif" alt="Greska" width="100" /><span class="commercialText">Head First C#</span></div></a></li>
+        </ul>
+        @RenderBody()
+        <footer class="footer footerMargin">
+            <div class="container">
+                <div class="panel borderFooter">
+                    <div class="panel-heading backgroundColor borderFooterBottom">&copy; Dragan Hristović</div>
+                    <div class="panel-body footerBackground">Zaječar, @(DateTime.Now.Year).</div>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>

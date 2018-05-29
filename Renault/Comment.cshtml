@@ -1,0 +1,51 @@
+﻿@using System.Text;
+@{ 
+    Layout = "~/_Layout.cshtml";
+    Page.Title = "Komentari";
+
+    if (IsPost)
+    {
+        StringBuilder sb = new StringBuilder();
+
+        sb.Append(HttpUtility.HtmlEncode(Request["userName"]));
+        sb.Append("‚");
+        sb.Append(HttpUtility.HtmlEncode(Request["email"]));
+        sb.Append("‚");
+        sb.Append(HttpUtility.HtmlEncode(Request["website"]));
+        sb.Append("‚");
+        sb.Append(HttpUtility.HtmlEncode(Request["comment"]));
+        sb.Append("¸");
+
+        File.AppendAllText(Server.MapPath("~/Files/komentari.txt"), sb.ToString(), Encoding.UTF8);
+    }
+}
+        <div class="container margin-top-80">
+            <h1 class="heading1 margin-bottom-40">Komentari:</h1>
+            @{ if (File.Exists(Server.MapPath("~/Files/komentari.txt")))
+               {
+            @:<table>
+                @:<tr>
+                    @:<th>User name</th>
+                    @:<th>E-mail</th>
+                    @:<th>Website</th>
+                    @:<th>Comment</th>
+                @:</tr>
+                    string[] content = File.ReadAllText(Server.MapPath("~/Files/komentari.txt"), Encoding.UTF8).Split(new char[] { '¸' }, StringSplitOptions.RemoveEmptyEntries);
+                    foreach (var com in content)
+                    {
+                        string[] line = com.Split(new char[] { '‚' });
+                <tr>
+                    <td>@Html.Raw(line[0])</td>
+                    <td>@Html.Raw(line[1])</td>
+                    <td>@Html.Raw(line[2])</td>
+                    <td>@Html.Raw(line[3])</td>
+                </tr>
+                    }
+            @:</table>
+                }
+                else
+                {
+            @:<h2 class="heading2">Nema komentara!</h2>
+                }
+            }
+        </div>

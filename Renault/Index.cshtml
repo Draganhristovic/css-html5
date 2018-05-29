@@ -1,0 +1,152 @@
+﻿@{ 
+    Layout = "~/_Layout.cshtml";
+    Page.Title = "Renault";
+}
+@section skripte {
+    <script>   
+        $(document).ready(function () {
+            $('[data-toggle="tooltip"]').tooltip();
+        });
+        $('.carousel').carousel({
+            interval: 2000
+        });
+    </script>
+}
+    <div class="container margin-top-80">
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active darkIndicator"></li>
+                <li data-target="#myCarousel" data-slide-to="1" class="darkIndicator"></li>
+                <li data-target="#myCarousel" data-slide-to="2" class="darkIndicator"></li>
+            </ol>
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner">
+                <div class="item active">
+                    <img class="slikaCarousel" src="https://d1ek71enupal89.cloudfront.net/images/blocks_png/RENAULT/CLIO/5DR/13RenCli5drRedFR1_800.jpg" alt="Clio">
+                    <div class="carousel-caption naslov">
+                        <h3>Renault Clio</h3>
+                        <p>Vožnja ovog automobila je uvek zabavna!</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <img class="slikaCarousel" src="https://d1ek71enupal89.cloudfront.net/images/blocks_png/RENAULT/CAPTUR/5DR/14RenCapDynSMed5drBlaFR1_800.jpg" alt="Captur">
+                    <div class="carousel-caption naslov">
+                        <h3>Renault Captur</h3>
+                        <p>Hvala ti Captur!</p>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <img class="slikaCarousel" src="https://imgct2.aeplcdn.com/img/800x600/car-data/big/renault-fluence-default-image.png-version201708021804.png" alt="Fluence">
+                    <div class="carousel-caption naslov">
+                        <h3>Renault Fluence</h3>
+                        <p>Volimo Renault Fluence!</p>
+                    </div>
+                </div>
+
+            </div>
+            <!-- Left and right controls -->
+            <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left blackColor"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right blackColor"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+        <br />
+    </div>
+    <div class="container headerColor">
+        <ul class="nav nav-tabs">
+            <li class="active"><a data-toggle="tab" href="#renault" class="renaultColor">Renault</a></li>
+            <li><a data-toggle="tab" href="#clio" class="renaultColor">Clio</a></li>
+            <li><a data-toggle="tab" href="#thalia" class="renaultColor">Thalia</a></li>
+            <li><a data-toggle="tab" href="#scenic" class="renaultColor">Scenic</a></li>
+            <li><a data-toggle="tab" href="#fluence" class="renaultColor">Fluence</a></li>
+            <li><a data-toggle="tab" href="#talisman" class="renaultColor">Talisman</a></li>
+            <li><a data-toggle="tab" href="#megane" class="renaultColor">Megane</a></li>
+        </ul>
+        <div class="tab-content">
+            <div id="renault" class="tab-pane fade in active justify">
+                <h3>Renault</h3>
+                <p class="pMargin">
+                    Groupe Renault is a French multinational automobile manufacturer established in 1899. The company produces a range of cars and vans, and in the past has manufactured trucks, tractors, tanks, buses/coaches and autorail vehicles.
+                    According to the Organisation Internationale des Constructeurs d'Automobiles, in 2015 Renault was the tenth biggest automaker in the world by production volume, with 50.5% of sales coming outside of Europe. The Renault–Nissan Alliance is the fourth-largest automotive group.
+                </p>
+            </div>
+            <div id="clio" class="tab-pane fade justify">
+                <h3>Renault Clio</h3>
+                <p class="pMargin">
+                    The Renault Clio is a supermini car (B-segment), produced by the French automobile manufacturer Renault. It was launched in 1990, and was in its fourth generation in 2012. The Clio has had substantial critical and commercial success, being consistently one of Europe's top-selling cars since its launch, and it is largely credited with restoring Renault's reputation and stature after a difficult second half of the 1980s. The Clio is one of only three cars, the others being the Volkswagen Golf and Opel Astra, to have been voted European Car of the Year twice, in 1991 and 2006.
+                </p>
+            </div>
+            <div id="thalia" class="tab-pane fade justify">
+                <h3>Renault Thalia</h3>
+                <p class="pMargin">
+                    The Renault Symbol, or Thalia in some markets, is a supermini car produced by the French automobile manufacturer Renault. It was introduced in late 1999, under the Clio Symbol name, as the saloon version of the second generation Renault Clio, and unlike the hatchback it was marketed only in those countries where saloons were traditionally preferred over hatchbacks, while it was not available in Western Europe.
+                </p>
+            </div>
+            <div id="scenic" class="tab-pane fade justify">
+                <h3>Renault Scenic</h3>
+                <p class="pMargin">
+                    The Renault Scénic is a compact multi-purpose vehicle (MPV) produced by French automaker Renault, the first to be labelled as such in Europe. It is based on the chassis of the Mégane small family car. It became the 1997 European Car of the Year on its launch in late 1996. The second and third generations have a model called Grand Scénic, which has 7 seats rather than 5.
+                </p>
+            </div>
+            <div id="fluence" class="tab-pane fade justify">
+                <h3>Renault Fluence</h3>
+                <p class="pMargin">
+                    The Renault Fluence is a small family car produced by the French automaker Renault. The car was produced until 2016 at the Oyak-Renault plant in Bursa, Turkey, and it still is produced in Santa Isabel, Argentina, for the Latin American market and in Busan, South Korea, for the Asia-Pacific market.
+
+                    On 12 July 2016, Renault unveiled the successor to the Fluence, initially for the European market, the Megane Sedan IV.
+                </p>
+            </div>
+            <div id="talisman" class="tab-pane fade justify">
+                <h3>Renault Talisman</h3>
+                <p class="pMargin">
+                    The Renault Talisman is a large family car manufactured by the French car manufacturer Renault. It is marketed in South Korea as the Renault Samsung SM6.
+
+                    Renault executives stated that, like the new Espace V crossover, it will not be engineered for markets with RHD, such as the United Kingdom, Ireland, Malta, Cyprus, Japan, Singapore, Hong Kong, Malaysia, Australia and New Zealand, due to the decline in the traditional saloon market.
+                </p>
+            </div>
+            <div id="megane" class="tab-pane fade justify">
+                <h3>Renault Megane</h3>
+                <p class="pMargin">
+                    The Renault Mégane is a small family car produced by the French manufacturer Renault since 1995, and was the successor to the Renault 19.
+
+                    The Mégane has been offered in three- and five-door hatchback, saloon, coupé, convertible and estate bodystyles at various points in its lifetime, and has been through three generations. The first generation was largely based on its predecessor, the 19, and utilized modified versions of that car's drivetrain and chassis. In 1996, the Mégane Scénic compact MPV was introduced, using the same mechanical components as the hatchback Mégane.
+                </p>
+            </div>
+        </div>
+    </div>
+    <form action="~/Comment" method="post">
+        <div class="container najtamnijaPozadina">
+            <p>Unesite komentar:</p>
+            <div class="input-group has-feedback margin-20">
+                <span class="input-group-addon top-addon" id="basic-addon1"><span class="glyphicon glyphicon-user"></span></span>
+                <input id="commentUser" type="text" value="" class="form-control top-input" name="userName" placeholder="Unesite ime i prezime..." oninput="enableDisableButton()" aria-describedby="basic-addon1">
+                <span class="glyphicon glyphicon-asterisk form-control-feedback asterisk top-input"></span>
+            </div>
+            <div class="input-group has-feedback margin-20">
+                <span class="input-group-addon no-radius" id="basic-addon2"><span class="glyphicon glyphicon-envelope"></span></span>
+                <input id="commentMail" type="text" value="" class="form-control no-radius" name="email" placeholder="user@domain.com" oninput="enableDisableButton()" aria-describedby="basic-addon2">
+                <span class="glyphicon glyphicon-asterisk form-control-feedback asterisk"></span>
+            </div>
+            <div class="input-group margin-20">
+                <span class="input-group-addon no-radius" id="basic-addon3"><span class="glyphicon glyphicon-globe"></span></span>
+                <input id="commentWebSite" type="text" value="" class="form-control no-radius" name="website" placeholder="https://www.mysite.com" aria-describedby="basic-addon3">
+            </div>
+            <div class="form-group required-field-block has-feedback margin-20">
+                <div class="input-group">
+                    <span class="input-group-addon bottom-addon" id="basic-addon4"><span class="glyphicon glyphicon-pencil"></span></span>
+                    <textarea id="commentTextarea" name="comment" rows="3" size="20" maxlength="200" value="" class="form-control bottom-input" placeholder="Unesite komentar (najviše 200 karaktera)..." oninput="enableDisableButton()" aria-describedby="basic-addon4"></textarea>
+                    <span class="glyphicon glyphicon-asterisk form-control-feedback asterisk"></span>
+                </div>
+            </div>
+            <div class="margin-20 rightAlign">
+                <button id="commentSend" type="submit" class="btn btn-warning disabled" disabled>Pošalji</button>
+            </div>
+        </div>
+    </form>
+    <script>enableDisableButton();</script>
